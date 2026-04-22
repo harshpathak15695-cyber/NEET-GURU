@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-neet-green: #10b981;
+  --color-neet-blue: #3b82f6;
+  --color-neet-physics: #f59e0b;
+  --color-neet-bg: #f8fafc;
+}
+
+@layer base {
+  body {
+    @apply bg-neet-bg text-slate-900 font-sans antialiased;
+  }
+}
+
+.markdown-content h1, .markdown-content h2, .markdown-content h3 {
+  @apply font-bold mt-4 mb-2;
+}
+
+.markdown-content p {
+  @apply mb-3 leading-relaxed;
+}
+
+.markdown-content ul, .markdown-content ol {
+  @apply ml-6 mb-4 list-disc;
+}
+
+.markdown-content blockquote {
+  @apply border-l-4 border-slate-300 pl-4 italic my-4;
+}
+
+.neet-header {
+  @apply text-xs font-semibold tracking-wider uppercase opacity-60 mb-1 block;
+}
+
+.neet-section {
+  @apply bg-white border border-slate-200 rounded-xl p-5 shadow-sm mb-4 transition-all hover:shadow-md;
+}
+
+.neet-badge {
+  @apply px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-tighter;
+}
+
