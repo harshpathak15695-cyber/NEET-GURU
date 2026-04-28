@@ -33,7 +33,7 @@ export default function App() {
     scrollToBottom();
   }, [messages]);
 
-  const handleSend = async (text: stringOverride = input) => {
+  const handleSend = async (text?: string) => {
     const messageText = typeof text === 'string' ? text : input;
     if (!messageText.trim() || isLoading) return;
 
@@ -190,8 +190,9 @@ export default function App() {
             <Send size={18} />
           </button>
         </div>
-        <p className="max-w-4xl mx-auto text-center mt-3 text-[10px] text-slate-400 font-medium uppercase tracking-widest">
-           Physics • Chemistry • Biology • NCERT Expert AI
+        <p className="max-w-4xl mx-auto text-center mt-3 text-[10px] text-slate-400 font-medium uppercase tracking-widest flex flex-col gap-1">
+           <span>Physics • Chemistry • Biology • NCERT Expert AI</span>
+           <span className="opacity-70">Created by Gems of Gemini</span>
         </p>
       </footer>
     </div>
